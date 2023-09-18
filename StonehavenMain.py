@@ -2,7 +2,7 @@ from City import City
 
 def main():
     # Start Up Sequence
-    Stonehaven = City()
+    Stonehaven = City("Stonehaven")
     start = True
     '''
     Starting the actual commands
@@ -59,7 +59,7 @@ def main():
             case 5:
                 Stonehaven.defInter()
             case 6:
-                Stonehaven.move()
+                Stonehaven.moveInter()
             case 7:
                 print("Paired to Sending Stone")
             case 8:

@@ -1,4 +1,4 @@
-import GlyphOfWarning as GOF
+import Spells.GlyphOfWarning as GOF
 class Scan():
     
 

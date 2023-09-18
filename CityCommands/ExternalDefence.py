@@ -43,16 +43,17 @@ class ExternalDefence (Defence):
     def cloudDesc(self):
         print(self.cloud)
 
-    def illusionActivation(self):
+    def exActivation(self):
         illInter = True
         while (illInter):
             print("____________________________________________________________________")
-            print("Working with the Illusion Interface")
+            print("Working with the Active Defence Interface")
             print("1. Activate Mirror Image")
             # Ooc to show that a Mirror Image was hit
             print("2. Mirror Image Hit")
             print("3. Description of Mirror Image")
             print("4. Description of Vision Blocking Image")
+            print("5. Earthbind rune")
             print("10. Exit Defence Interface")
             print("____________________________________________________________________")
             result = input("Give me the number: ")
@@ -71,6 +72,8 @@ class ExternalDefence (Defence):
                     self.mirrorDesc()
                 case 4:
                     self.cloudDesc()
+                case 5:
+                    self.earthbind()
                 case 10:
                     illInter = False
                 case _:
@@ -106,3 +109,7 @@ class ExternalDefence (Defence):
 
     def turnOffDefences(self):
         self.cloud.setExists(False)
+
+
+    def earthbind(self):
+        GOF.casting("Earth Bind",2)
